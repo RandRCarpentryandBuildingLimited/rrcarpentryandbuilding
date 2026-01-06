@@ -234,6 +234,7 @@ ul.clean li { margin: .35rem 0; }
   box-shadow: 0 6px 20px rgba(0,0,0,.06);
   display:block;
   background: var(--light);
+  position: relative;
 }
 .gallery img {
   width: 100%;
@@ -335,11 +336,20 @@ ul.clean li { margin: .35rem 0; }
   }
 }
 .caption {
-  padding: .7rem .85rem;
-  background: rgba(255,255,255,.92);
-  border-top: 1px solid rgba(46,54,56,.10);
-  font-weight: 800;
-  color: rgba(46,54,56,.88);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .6rem .8rem;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.15),
+    transparent
+  );
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem;
 }
 
 .form-wrap {
