@@ -48,9 +48,9 @@ header {
   box-shadow: var(--shadow);
 }
 .brand .mark img {
-  width: 65px;
+  width: 75px;
   height: auto;
-  max-height: 65px;
+  max-height: 75px;
   object-fit: contain;
   display: block;
 }
