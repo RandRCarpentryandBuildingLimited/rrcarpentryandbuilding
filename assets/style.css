@@ -41,7 +41,7 @@ header {
   letter-spacing: .2px;
 }
 .brand .mark {
-  width: 57px; height: 57px;
+  width: 40px; height: 40px;
   border-radius: 12px;
   background: var(--charcoal);
   display:grid; place-items:center;
