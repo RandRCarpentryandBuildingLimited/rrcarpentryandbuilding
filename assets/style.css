@@ -235,11 +235,17 @@ ul.clean li { margin: .35rem 0; }
   display:block;
   background: var(--light);
 }
-.gallery img {
+.gallery img { 
   width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
+}
+.gallery a {
+  padding: 12px;
+}
+.gallery a {
+  padding: 12px;
 }
 .caption {
   padding: .7rem .85rem;
