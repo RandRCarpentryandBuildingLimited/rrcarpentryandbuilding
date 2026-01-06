@@ -18,22 +18,67 @@
       Roofing project — framework to finished roof.
     </p>
 
-    <div class="gallery" aria-label="Project 1 photos">
-  <a href="../viewer.html?img=assets/projects/p01/p1-01.jpg"><img src="../assets/projects/p01/p1-01.jpg" alt="Project 1 photo 1"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-02.jpg"><img src="../assets/projects/p01/p1-02.jpg" alt="Project 1 photo 2"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-03.jpg"><img src="../assets/projects/p01/p1-03.jpg" alt="Project 1 photo 3"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-04.jpg"><img src="../assets/projects/p01/p1-04.jpg" alt="Project 1 photo 4"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-05.jpg"><img src="../assets/projects/p01/p1-05.jpg" alt="Project 1 photo 5"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-06.jpg"><img src="../assets/projects/p01/p1-06.jpg" alt="Project 1 photo 6"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-07.jpg"><img src="../assets/projects/p01/p1-07.jpg" alt="Project 1 photo 7"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-08.jpg"><img src="../assets/projects/p01/p1-08.jpg" alt="Project 1 photo 8"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-09.jpg"><img src="../assets/projects/p01/p1-09.jpg" alt="Project 1 photo 9"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-10.jpg"><img src="../assets/projects/p01/p1-10.jpg" alt="Project 1 photo 10"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-11.jpg"><img src="../assets/projects/p01/p1-11.jpg" alt="Project 1 photo 11"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-12.jpg"><img src="../assets/projects/p01/p1-12.jpg" alt="Project 1 photo 12"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-13.jpg"><img src="../assets/projects/p01/p1-13.jpg" alt="Project 1 photo 13"></a>
-  <a href="../viewer.html?img=assets/projects/p01/p1-14.jpg"><img src="../assets/projects/p01/p1-14.jpg" alt="Project 1 photo 14"></a>
-</div>
+    <!-- Project slider (main image + thumbnails) -->
+<section class="proj" aria-label="Project 1 photos">
+  <div class="proj-main">
+    <button class="proj-nav prev" type="button" aria-label="Previous photo">‹</button>
+
+    <a id="projLink" class="proj-frame" href="../viewer.html?img=assets/projects/p01/p1-01.jpg">
+      <img id="projMainImg" src="../assets/projects/p01/p1-01.jpg" alt="Project 1 photo 1">
+    </a>
+
+    <button class="proj-nav next" type="button" aria-label="Next photo">›</button>
+  </div>
+
+  <div class="proj-meta">
+    <span id="projCount">1 / 14</span>
+  </div>
+
+  <div class="proj-thumbs" role="list" aria-label="Project 1 thumbnails">
+    <button type="button" class="thumb is-active" data-src="../assets/projects/p01/p1-01.jpg" data-view="assets/projects/p01/p1-01.jpg" aria-label="View photo 1">
+      <img src="../assets/projects/p01/p1-01.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-02.jpg" data-view="assets/projects/p01/p1-02.jpg" aria-label="View photo 2">
+      <img src="../assets/projects/p01/p1-02.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-03.jpg" data-view="assets/projects/p01/p1-03.jpg" aria-label="View photo 3">
+      <img src="../assets/projects/p01/p1-03.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-04.jpg" data-view="assets/projects/p01/p1-04.jpg" aria-label="View photo 4">
+      <img src="../assets/projects/p01/p1-04.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-05.jpg" data-view="assets/projects/p01/p1-05.jpg" aria-label="View photo 5">
+      <img src="../assets/projects/p01/p1-05.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-06.jpg" data-view="assets/projects/p01/p1-06.jpg" aria-label="View photo 6">
+      <img src="../assets/projects/p01/p1-06.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-07.jpg" data-view="assets/projects/p01/p1-07.jpg" aria-label="View photo 7">
+      <img src="../assets/projects/p01/p1-07.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-08.jpg" data-view="assets/projects/p01/p1-08.jpg" aria-label="View photo 8">
+      <img src="../assets/projects/p01/p1-08.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-09.jpg" data-view="assets/projects/p01/p1-09.jpg" aria-label="View photo 9">
+      <img src="../assets/projects/p01/p1-09.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-10.jpg" data-view="assets/projects/p01/p1-10.jpg" aria-label="View photo 10">
+      <img src="../assets/projects/p01/p1-10.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-11.jpg" data-view="assets/projects/p01/p1-11.jpg" aria-label="View photo 11">
+      <img src="../assets/projects/p01/p1-11.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-12.jpg" data-view="assets/projects/p01/p1-12.jpg" aria-label="View photo 12">
+      <img src="../assets/projects/p01/p1-12.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-13.jpg" data-view="assets/projects/p01/p1-13.jpg" aria-label="View photo 13">
+      <img src="../assets/projects/p01/p1-13.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p01/p1-14.jpg" data-view="assets/projects/p01/p1-14.jpg" aria-label="View photo 14">
+      <img src="../assets/projects/p01/p1-14.jpg" alt="">
+    </button>
+  </div>
+</section>
   </main>
 
 </body>
