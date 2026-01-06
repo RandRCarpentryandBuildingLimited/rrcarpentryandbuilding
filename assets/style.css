@@ -41,16 +41,16 @@ header {
   letter-spacing: .2px;
 }
 .brand .mark {
-  width: 36px; height: 36px;
+  width: 55px; height: 55px;
   border-radius: 12px;
   background: var(--charcoal);
   display:grid; place-items:center;
   box-shadow: var(--shadow);
 }
 .brand .mark img {
-  width: 40px;
+  width: 55px;
   height: auto;
-  max-height: 40px;
+  max-height: 55px;
   object-fit: contain;
   display: block;
 }
