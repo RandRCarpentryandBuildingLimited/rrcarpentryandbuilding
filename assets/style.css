@@ -1,12 +1,16 @@
 :root {
-  --charcoal: #2E3638;
-  --light: #ECEDED;
-  --accent: #B08D57;
-  --white: #ffffff;
-  --muted: #7a8284;
-  --shadow: 0 10px 30px rgba(0,0,0,.08);
-  --radius: 18px;
-  --max: 1120px;
+  --charcoal: #1C2325;        /* main background */
+--charcoal-soft: #232B2D;  /* cards / sections */
+--charcoal-light: #2E3638; /* borders / dividers */
+
+--accent: #B08D57;         /* gold */
+
+--text: #ECEDED;           /* main text */
+--muted: rgba(236,237,237,.65);
+
+--shadow: 0 10px 30px rgba(0,0,0,.35);
+--radius: 18px;
+--max: 1120px;
 }
 
 * { box-sizing: border-box; }
