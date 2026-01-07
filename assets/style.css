@@ -325,7 +325,7 @@ ul.clean li { margin: .35rem 0; }
 
 .thumb.is-active {
   outline: 2px solid rgba(176,141,87,.65);
-  border-color: rgba(176,141,87,.55);
+  outline-offset: 2px;
 }
 
 /* Mobile tweaks */
