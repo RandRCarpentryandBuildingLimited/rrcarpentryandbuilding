@@ -300,8 +300,8 @@ ul.clean li { margin: .35rem 0; }
 
 .proj-thumbs {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
 }
 
 /* Thumbnails styled like gallery tiles */
