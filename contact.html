@@ -70,26 +70,63 @@
           <h2 style="margin: .2rem 0 .7rem;">Send a message</h2>
           <p class="help" style="margin-top:0;">This form opens your email app and pre-fills a message — no account, no monthly fees, no spam.</p>
 
-          <form data-mailto="randrcb@hotmail.com">
-            <div>
-              <label for="name">Your name</label>
-              <input id="name" name="name" autocomplete="name" required placeholder="e.g. Sam Smith">
-            </div>
-            <div>
-              <label for="phone">Phone number</label>
-              <input id="phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 123456">
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="Tell us what you need done, where in Jersey, and any timing."></textarea>
-            </div>
-            <button class="btn primary" type="submit">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 12l16-8-6 16-3-7-7-1z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Open email to send
-            </button>
-          </form>
+          <form action="https://formsubmit.co/randrcb@hotmail.com" method="POST">
+  <!-- FormSubmit settings -->
+  <input type="hidden" name="_subject" value="New website enquiry – R&R Carpentry">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="true">
+
+  <div>
+    <label for="name">Your name</label>
+    <input
+      id="name"
+      name="name"
+      autocomplete="name"
+      required
+      placeholder="e.g. Sam Smith">
+  </div>
+
+  <div>
+    <label for="email">Email address</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      autocomplete="email"
+      required
+      placeholder="e.g. sam@email.com">
+  </div>
+
+  <div>
+    <label for="phone">Phone number</label>
+    <input
+  id="phone"
+  name="phone"
+  autocomplete="tel"
+  required
+  placeholder="e.g. 07700 123456">
+  </div>
+
+  <div>
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      placeholder="Tell us what you need done, where in Jersey, and any timing."></textarea>
+  </div>
+
+  <button class="btn primary" type="submit">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M4 12l16-8-6 16-3-7-7-1z"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </svg>
+    Send message
+  </button>
+</form>
         </div>
 
         <aside class="card" style="padding: 1.2rem;">
