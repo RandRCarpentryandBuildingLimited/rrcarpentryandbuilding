@@ -337,7 +337,7 @@ ul.clean li { margin: .35rem 0; }
     height: 360px; 
   }
   .proj-thumbs { 
-    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
   }
   .thumb img { 
     height: 76px; 
