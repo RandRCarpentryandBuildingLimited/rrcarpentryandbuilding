@@ -440,3 +440,11 @@ footer {
   .gallery a { grid-column: span 12; }
   .list-columns { grid-template-columns: 1fr; }
 }
+
+/* Services page buttons under External works */
+.services-actions {
+  display: flex;
+  justify-content: flex-end; /* pushes buttons to the right */
+  gap: .8rem;
+  margin-top: 1rem;
+}
