@@ -443,8 +443,9 @@ footer {
 
 /* Services page buttons under External works */
 .services-actions {
+  width: 100%;
   display: flex;
-  justify-content: flex-end; /* pushes buttons to the right */
+  justify-content: flex-end;
   gap: .8rem;
   margin-top: 1rem;
 }
