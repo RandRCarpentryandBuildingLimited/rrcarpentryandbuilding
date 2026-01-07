@@ -304,22 +304,23 @@ ul.clean li { margin: .35rem 0; }
   gap: 10px;
 }
 
+/* Thumbnails styled like gallery tiles */
 .thumb {
-  padding: 6px;
-  border-radius: 14px;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
   border: 1px solid rgba(46,54,56,.12);
-  background: var(--white);
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  background: var(--light);
   cursor: pointer;
-
-  height: 86px; /* same visual height as gallery-style cards */
 }
 
 .thumb img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;   /* same behaviour as gallery */
+  height: 86px;          /* thumbnail height (match feel of gallery tiles) */
+  object-fit: cover;     /* fills the tile like gallery */
   display: block;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .thumb.is-active {
