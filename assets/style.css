@@ -171,6 +171,7 @@ h1 {
 }
 .meta a:hover { background: rgba(236,237,237,.85); }
 .meta svg { width: 18px; height: 18px; flex: 0 0 auto; }
+.meta a svg { width: 18px !important; height: 18px !important; }
 .meta strong { display:block; font-size: .95rem; }
 .meta span { display:block; font-size: .9rem; color: rgba(46,54,56,.78); }
 
