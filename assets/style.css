@@ -317,9 +317,8 @@ ul.clean li { margin: .35rem 0; }
 
 .thumb img {
   width: 100%;
-  height: 120px;        /* slightly taller for clarity */
-  object-fit: contain; /* SHOW FULL IMAGE */
-  background: #f2f2f2; /* subtle backdrop for letterboxing */
+  height: 160px;
+  object-fit: cover;
   display: block;
 }
 
