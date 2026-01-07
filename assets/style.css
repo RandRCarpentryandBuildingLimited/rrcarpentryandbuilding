@@ -260,11 +260,9 @@ ul.clean li { margin: .35rem 0; }
 }
 
 .proj-frame {
-  display: block;
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .proj-frame img {
