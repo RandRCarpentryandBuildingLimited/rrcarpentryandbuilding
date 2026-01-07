@@ -311,15 +311,13 @@ ul.clean li { margin: .35rem 0; }
   background: var(--white);
   cursor: pointer;
 
-  aspect-ratio: 1 / 1;   /* makes the tile square */
-  display: grid;         /* helps image fill */
+  height: 86px; /* same visual height as gallery-style cards */
 }
 
 .thumb img {
   width: 100%;
-  height: 100%;          /* fill the square */
-  object-fit: cover;     /* fills the tile (will crop if needed) */
-  background: #f2f2f2;
+  height: 100%;
+  object-fit: cover;   /* same behaviour as gallery */
   display: block;
   border-radius: 10px;
 }
