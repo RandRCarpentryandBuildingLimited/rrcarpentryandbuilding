@@ -251,7 +251,11 @@ ul.clean li { margin: .35rem 0; }
 }
 
 /* Project slider */
-.proj { margin-top: 16px; }
+.proj {
+  margin: 16px auto 0;
+  max-width: 1200px;      /* ✅ makes the whole slider less wide */
+  padding: 0 16px;        /* keeps nice spacing on small screens */
+}
 
 .proj-main {
   display: grid;
@@ -261,15 +265,18 @@ ul.clean li { margin: .35rem 0; }
 }
 
 .proj-frame {
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
+  display: block;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .proj-frame img {
   width: 100%;
-  height: auto;              /* natural aspect ratio */
-  max-height: 520px;         /* controls vertical size */
+  height: auto;
+  max-height: 70vh;       /* ✅ bigger + more natural */
   object-fit: contain;
   display: block;
   background: #f2f2f2;
