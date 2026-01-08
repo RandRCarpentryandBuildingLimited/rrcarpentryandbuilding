@@ -253,11 +253,12 @@ ul.clean li { margin: .35rem 0; }
 /* Project slider */
 .proj {
   margin: 16px auto 0;
-  max-width: 1200px;      /* ✅ makes the whole slider less wide */
   padding: 0 16px;        /* keeps nice spacing on small screens */
 }
 
-.proj-main {
+.proj-main{
+  width: min(1100px, 100%);  /* ✅ only the main image area is narrower */
+  margin: 0 auto;            /* ✅ centers the main image area */
   display: grid;
   grid-template-columns: 52px 1fr 52px;
   gap: 12px;
