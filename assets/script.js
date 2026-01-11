@@ -36,3 +36,33 @@
     });
   }
 })();
+(function () {
+  const showcaseImg = document.getElementById("showcaseImage");
+  if (!showcaseImg) return;
+
+  const images = [
+    "assets/showcase/showcase-01.jpg",
+    "assets/showcase/showcase-02.jpg",
+    "assets/showcase/showcase-03.jpg",
+    "assets/showcase/showcase-04.jpg",
+    "assets/showcase/showcase-05.jpg",
+    "assets/showcase/showcase-06.jpg",
+    "assets/showcase/showcase-07.jpg",
+    "assets/showcase/showcase-08.jpg",
+    "assets/showcase/showcase-09.jpg",
+    "assets/showcase/showcase-10.jpg",
+    "assets/showcase/showcase-11.jpg",
+  ];
+
+  let i = 0;
+
+  setInterval(() => {
+    showcaseImg.style.opacity = 0;
+
+    setTimeout(() => {
+      i = (i + 1) % images.length;
+      showcaseImg.src = images[i];
+      showcaseImg.style.opacity = 1;
+    }, 350);
+  }, 4000);
+})();
