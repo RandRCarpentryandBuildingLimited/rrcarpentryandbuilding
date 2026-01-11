@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 8 | R&R Carpentry and Building Limited</title>
+
+  <link rel="icon" type="image/png" href="../assets/img/logo-01.png">
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <main class="wrap" style="padding: 32px 16px;">
+    <p style="margin:0 0 14px;">
+      <a href="../gallery.html" class="btn">← Back to gallery</a>
+    </p>
+
+    <h1 style="margin: 0 0 6px;">External building alterations & repairs project</h1>
+    <p style="margin: 0 0 18px; color: var(--muted);">
+      A selection of external improvement works focused on upgrading and refreshing the building exterior, with attention to durability and finish.
+    </p>
+
+    <!-- Project slider (main image + thumbnails) -->
+<section class="proj" aria-label="Project 8 photos">
+  <div class="proj-main">
+    <button class="proj-nav prev" type="button" aria-label="Previous photo">‹</button>
+
+    <a id="projLink" class="proj-frame" href="../viewer.html?img=assets/projects/p08/p8-01.jpg">
+      <img id="projMainImg" src="../assets/projects/p08/p8-01.jpg" alt="Project 8 photo 1">
+    </a>
+
+    <button class="proj-nav next" type="button" aria-label="Next photo">›</button>
+  </div>
+
+  <div class="proj-meta">
+    <span id="projCount">1 / 3</span>
+  </div>
+
+  <div class="proj-thumbs" role="list" aria-label="Project 8 thumbnails">
+    <button type="button" class="thumb is-active" data-src="../assets/projects/p08/p8-01.jpg" data-view="assets/projects/p08/p8-01.jpg" aria-label="View photo 1">
+      <img src="../assets/projects/p08/p8-01.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p08/p8-02.jpg" data-view="assets/projects/p08/p8-02.jpg" aria-label="View photo 2">
+      <img src="../assets/projects/p08/p8-02.jpg" alt="">
+    </button>
+    <button type="button" class="thumb" data-src="../assets/projects/p08/p8-03.jpg" data-view="assets/projects/p08/p8-03.jpg" aria-label="View photo 3">
+      <img src="../assets/projects/p08/p8-03.jpg" alt="">
+    </button>
+  </div>
+</section>
+  </main>
+<script>
+  (function () {
+    const thumbs = Array.from(document.querySelectorAll(".proj-thumbs .thumb"));
+    const mainImg = document.getElementById("projMainImg");
+    const link = document.getElementById("projLink");
+    const count = document.getElementById("projCount");
+    const prev = document.querySelector(".proj-nav.prev");
+    const next = document.querySelector(".proj-nav.next");
+
+    let index = 0;
+
+    function setActive(i) {
+      index = (i + thumbs.length) % thumbs.length;
+
+      thumbs.forEach((t, n) => t.classList.toggle("is-active", n === index));
+
+      const src = thumbs[index].dataset.src;    // ../assets/... for main image
+      const view = thumbs[index].dataset.view;  // assets/... for viewer.html
+
+      mainImg.src = src;
+      mainImg.alt = `Project 7 photo ${index + 1}`;
+      link.href = `../viewer.html?img=${view}`;
+      count.textContent = `${index + 1} / ${thumbs.length}`;
+    }
+
+    thumbs.forEach((t, i) => t.addEventListener("click", () => setActive(i)));
+    prev.addEventListener("click", () => setActive(index - 1));
+    next.addEventListener("click", () => setActive(index + 1));
+
+    // Keyboard arrows
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") setActive(index - 1);
+      if (e.key === "ArrowRight") setActive(index + 1);
+    });
+
+    // OPTIONAL auto-rotate (uncomment to enable)
+    // setInterval(() => setActive(index + 1), 4500);
+
+    setActive(0);
+  })();
+</script>
+</body>
+</html>
