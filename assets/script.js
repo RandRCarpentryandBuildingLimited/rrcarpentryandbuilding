@@ -35,8 +35,8 @@
       window.location.href = mailto;
     });
   }
-})();
-(function () {
+  
+// ✅ Homepage showcase (only runs if the image exists)
   const showcaseImg = document.getElementById("showcaseImage");
   if (!showcaseImg) return;
 
