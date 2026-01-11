@@ -51,7 +51,6 @@
     "assets/showcase/showcase-08.jpg",
     "assets/showcase/showcase-09.jpg",
     "assets/showcase/showcase-10.jpg",
-    "assets/showcase/showcase-11.jpg",
   ];
 
   let i = 0;
