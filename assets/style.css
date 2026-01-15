@@ -421,6 +421,18 @@ footer {
 .pills {
   display:flex; gap:.6rem; flex-wrap:wrap;
 }
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+.footer-logo{
+  width:44px;
+  height:44px;
+  object-fit:contain;
+  border-radius:12px; /* optional: matches your rounded style */
+}
 .pill {
   display:inline-flex; align-items:center; gap:.45rem;
   padding: .45rem .75rem;
