@@ -430,6 +430,19 @@ footer {
   font-weight: 800;
   color: rgba(46,54,56,.86);
 }
+.pill svg{
+  width:16px;
+  height:16px;
+  flex:0 0 16px;
+  display:block;
+}
+.pill svg path,
+.pill svg circle{
+  stroke: currentColor;
+}
+.pill svg path[fill]{
+  fill: currentColor;
+}
 
 @media (max-width: 920px) {
   .hero-grid { grid-template-columns: 1fr; }
