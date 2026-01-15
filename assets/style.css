@@ -443,6 +443,16 @@ footer {
 .pill svg path[fill]{
   fill: currentColor;
 }
+.pill svg{
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  display:block;
+}
+
+.footer-grid > small{
+  white-space:nowrap;
+}
 
 @media (max-width: 920px) {
   .hero-grid { grid-template-columns: 1fr; }
