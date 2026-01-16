@@ -426,12 +426,22 @@ footer {
   align-items:center;
   gap:.75rem;
 }
-
-.footer-logo{
-  width:50px;
-  height:50px;
+.footer-mark{
+  width:95px;
+  height:95px;
+  border-radius:12px;
+  background: var(--charcoal);
+  display:grid;
+  place-items:center;
+  box-shadow: var(--shadow);
+  flex: 0 0 95px;
+}
+.footer-mark img{
+  width:75px;
+  height:auto;
+  max-height:75px;
   object-fit:contain;
-  border-radius:10px; /* optional: matches your rounded style */
+  display:block;
 }
 .pill {
   display:inline-flex; align-items:center; gap:.45rem;
