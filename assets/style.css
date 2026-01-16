@@ -427,8 +427,8 @@ footer {
   gap:.75rem;
 }
 .footer-mark{
-  width:95px;
-  height:95px;
+  width:70px;
+  height:70px;
   border-radius:12px;
   background: var(--charcoal);
   display:grid;
@@ -437,9 +437,9 @@ footer {
   flex: 0 0 95px;
 }
 .footer-mark img{
-  width:75px;
+  width:55px;
   height:auto;
-  max-height:75px;
+  max-height:55px;
   object-fit:contain;
   display:block;
 }
