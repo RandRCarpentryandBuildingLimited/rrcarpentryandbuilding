@@ -431,7 +431,7 @@ footer {
   height:60px;
   border-radius:12px;
   background: var(--charcoal);
-  display:grid;
+  display:block;
   place-items:center;
   box-shadow: var(--shadow);
   flex: 0 0 95px;
