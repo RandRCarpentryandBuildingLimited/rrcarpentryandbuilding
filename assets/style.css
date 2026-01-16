@@ -427,14 +427,14 @@ footer {
   gap:.75rem;
 }
 .footer-mark{
-  width:60px;
-  height:60px;
+  width:65px;
+  height:65px;
   border-radius:12px;
   background: var(--charcoal);
   display:grid;
   place-items:center;
   box-shadow: var(--shadow);
-  flex: 0 0 60px;
+  flex: 0 0 65px;
 }
 .footer-mark img{
   width:55px;
