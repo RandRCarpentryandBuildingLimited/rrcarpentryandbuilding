@@ -427,7 +427,7 @@ footer {
   gap:.75rem;
 }
 .footer-mark{
-  width:30px;
+  width:60px;
   height:60px;
   border-radius:12px;
   background: var(--charcoal);
