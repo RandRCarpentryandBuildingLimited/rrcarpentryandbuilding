@@ -526,42 +526,58 @@ footer {
 }
 /* MOBILE HEADER FIX */
 @media (max-width: 720px) {
-  .nav{
+
+  .nav {
     flex-wrap: wrap;
-    gap: .6rem;
+    align-items: center;
   }
 
-  /* Brand stays on top row */
-  .brand{
-    flex: 1 1 auto;
-    min-width: 0;
+  /* Brand stays first */
+  .brand {
+    order: 1;
+    width: 100%;
   }
 
-  /* Put Call / Get in touch on their own row */
-  .cta{
-    order: 3;
+  /* CTA buttons row */
+  .cta {
+    order: 2;
     width: 100%;
     display: flex;
     gap: .6rem;
+    margin-top: .5rem;
   }
 
-  /* Make both buttons fit nicely */
-  .cta .btn{
+  .cta .btn {
     flex: 1;
     justify-content: center;
-    white-space: nowrap;
-    padding: .6rem .85rem;
   }
-  
-/* Keep the burger on the top row, right aligned */
-  .mobile-toggle{
-    order: 2;
-    margin-left: auto;
+
+  /* Burger moves BELOW buttons */
+  .mobile-toggle {
+    order: 3;
+    width: 100%;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: flex-start; /* ← LEFT */
   }
-  
-  /* Menu panel comes after buttons */
-  .navlinks{
+
+  /* Menu links under burger */
+  .navlinks {
     order: 4;
     width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: .4rem;
+  }
+
+  .navlinks a {
+    padding: .6rem 0;
+    font-size: 1rem;
+  }
+
+  .navlinks.is-open {
+    display: flex;
   }
 }
