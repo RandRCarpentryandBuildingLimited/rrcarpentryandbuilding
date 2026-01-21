@@ -524,3 +524,17 @@ footer {
   gap: .8rem;
   margin-top: 1rem;
 }
+/* Header: stack nicely on small screens */
+@media (max-width: 720px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: .6rem;
+    padding: .75rem 0;
+  }
+
+  .brand .mark { width: 64px; height: 64px; }
+  .brand .mark img { width: 48px; max-height: 48px; }
+
+  /* If you have a right-side nav/actions container, this helps it drop below */
+  .nav > * { max-width: 100%; }
+}
