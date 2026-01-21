@@ -524,3 +524,67 @@ footer {
   gap: .8rem;
   margin-top: 1rem;
 }
+@media (max-width: 720px) {
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  /* Brand stays at top */
+  .brand {
+    width: 100%;
+  }
+
+  /* Mobile action stack */
+  .mobile-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-top: .75rem;
+  }
+
+  /* Call + Get in touch row */
+  .cta {
+    display: flex;
+    gap: .6rem;
+  }
+
+  .cta .btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* Burger BELOW buttons, not full width */
+  .mobile-toggle {
+    align-self: flex-start;
+    padding: .55rem .75rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,.75);
+    border: 1px solid rgba(46,54,56,.12);
+  }
+
+  /* Hide menu by default */
+  .navlinks {
+    display: none;
+    width: 100%;
+    margin-top: .75rem;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  /* Show only when opened */
+  .navlinks.is-open {
+    display: flex;
+  }
+
+  .navlinks a {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    padding: .75rem 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+}
