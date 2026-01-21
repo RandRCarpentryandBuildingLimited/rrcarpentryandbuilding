@@ -537,12 +537,6 @@ footer {
     min-width: 0;
   }
 
-  /* Keep the burger on the top row, right aligned */
-  .mobile-toggle{
-    order: 2;
-    margin-left: auto;
-  }
-
   /* Put Call / Get in touch on their own row */
   .cta{
     order: 3;
@@ -558,7 +552,13 @@ footer {
     white-space: nowrap;
     padding: .6rem .85rem;
   }
-
+  
+/* Keep the burger on the top row, right aligned */
+  .mobile-toggle{
+    order: 2;
+    margin-left: auto;
+  }
+  
   /* Menu panel comes after buttons */
   .navlinks{
     order: 4;
