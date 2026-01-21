@@ -566,18 +566,21 @@ footer {
 
   /* Menu links under burger */
   .navlinks {
-    order: 4;
     width: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
-    margin-top: .4rem;
+    align-items: center;   /* ← centers links */
+    gap: .8rem;
+    padding: 1rem 0;
   }
 
   .navlinks a {
-    padding: .6rem 0;
-    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;      /* keeps it thumb-friendly */
+    text-align: center;
+    padding: .75rem 1rem;
+    border-radius: 12px;
+    font-weight: 700;
   }
 
   .navlinks.is-open {
