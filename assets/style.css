@@ -526,60 +526,54 @@ footer {
 }
 @media (max-width: 720px) {
 
-  .nav {
+  .nav{
+    display: flex;
     flex-wrap: wrap;
-  }
-
-  /* Brand stays at top */
-  .brand {
-    width: 100%;
-  }
-
-  /* Mobile action stack */
-  .mobile-actions {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
-    margin-top: .75rem;
-  }
-
-  /* Call + Get in touch row */
-  .cta {
-    display: flex;
-    gap: .6rem;
-  }
-
-  .cta .btn {
-    flex: 1;
-    justify-content: center;
-  }
-
-  /* Burger BELOW buttons, not full width */
-  .mobile-toggle {
-    align-self: flex-start;
-    padding: .55rem .75rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,.75);
-    border: 1px solid rgba(46,54,56,.12);
-  }
-
-  /* Hide menu by default */
-  .navlinks {
-    display: none;
-    width: 100%;
-    margin-top: .75rem;
-    flex-direction: column;
     align-items: center;
     gap: .75rem;
   }
 
-  /* Show only when opened */
-  .navlinks.is-open {
+  /* 1) Brand top */
+  .brand{
+    order: 1;
+    width: 100%;
+  }
+
+  /* 2) CTA buttons below brand */
+  .cta{
+    order: 2;
+    width: 100%;
+    display: flex;
+    gap: .6rem;
+  }
+  .cta .btn{
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* 3) Burger below the buttons, left aligned, NOT full width */
+  .mobile-toggle{
+    order: 3;
+    width: auto;
+    align-self: flex-start;
+    margin-top: .25rem;
+  }
+
+  /* 4) Nav links below burger - hidden until opened */
+  .navlinks{
+    order: 4;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 0 0;
+  }
+  .navlinks.is-open{
     display: flex;
   }
 
-  .navlinks a {
+  .navlinks a{
     width: 100%;
     max-width: 260px;
     text-align: center;
