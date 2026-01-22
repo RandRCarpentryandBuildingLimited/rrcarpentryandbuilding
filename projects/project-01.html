@@ -161,6 +161,51 @@
 
     let index = 0;
 
+    // ✅ Lock video mute forever (even if user moves volume slider)
+    if (mainVideo) {
+      const lockMute = () => {
+        if (!mainVideo.muted || mainVideo.volume > 0) {
+          mainVideo.muted = true;
+          mainVideo.volume = 0;
+        }
+      };
+      mainVideo.muted = true;
+      mainVideo.volume = 0;
+      mainVideo.addEventListener("volumechange", lockMute);
+    }
+
+    function showImage(src, view, i) {
+      // hide video
+      if (mainVideo) {
+        mainVideo.pause();
+        mainVideo.currentTime = 0;
+        mainVideo.style.display = "none";
+      }
+
+      mainImg.style.display = "block";
+      mainImg.src = src;
+      mainImg.alt = `Project 1 photo ${i + 1}`;
+      link.href = `../viewer.html?img=${view}`;
+    }
+
+    function showVideo(src) {
+      mainImg.style.display = "none";
+
+      if (!mainVideo || !mainVideoSrc) return;
+
+      mainVideo.style.display = "block";
+      mainVideoSrc.src = src;
+
+      // ✅ force mute every time video loads
+      mainVideo.muted = true;
+      mainVideo.volume = 0;
+
+      mainVideo.load();
+
+      // viewer.html is image-only, so disable link when it's video
+      link.removeAttribute("href");
+    }
+
     function setActive(i) {
       index = (i + thumbs.length) % thumbs.length;
 
@@ -171,29 +216,9 @@
       const view = thumbs[index].dataset.view;  // assets/... for viewer.html
 
       if (type === "video") {
-        // show video, hide image
-        mainImg.style.display = "none";
-
-        mainVideo.style.display = "block";
-        mainVideoSrc.src = src;
-        mainVideo.muted = true;   // ✅ force mute
-        mainVideo.volume = 0;     // ✅ double safety
-        mainVideo.load();
-
-        // viewer.html is image-only, so disable link when it's video
-        link.removeAttribute("href");
+        showVideo(src);
       } else {
-        // show image, hide video
-        if (mainVideo) {
-          mainVideo.pause();
-          mainVideo.style.display = "none";
-        }
-
-        mainImg.style.display = "block";
-        mainImg.src = src;
-        mainImg.alt = `Project 1 photo ${index + 1}`;
-
-        link.href = `../viewer.html?img=${view}`;
+        showImage(src, view, index);
       }
 
       count.textContent = `${index + 1} / ${thumbs.length}`;
