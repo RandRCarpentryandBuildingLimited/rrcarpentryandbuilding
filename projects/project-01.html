@@ -176,6 +176,8 @@
 
         mainVideo.style.display = "block";
         mainVideoSrc.src = src;
+        mainVideo.muted = true;   // ✅ force mute
+        mainVideo.volume = 0;     // ✅ double safety
         mainVideo.load();
 
         // viewer.html is image-only, so disable link when it's video
